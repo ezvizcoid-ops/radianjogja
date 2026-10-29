@@ -1,0 +1,308 @@
+# oct/29/2026 17:32:47 by RouterOS 6.47.9
+# software id = YZ0X-UZFH
+#
+Flags: X - disabled, I - invalid, D - dynamic 
+ 0    name="# GLOBAL" target=LAN parent=none packet-marks="" priority=2/2 
+      queue=default-small/default-small limit-at=10M/10M max-limit=300M/200M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.5/0.5 
+
+ 1    ;;; L
+      name="s 10  BIMO" target=3.3.3.10/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 2    ;;; L
+      name="s 9  PC" target=3.3.3.9/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=512k/512k 
+      max-limit=50500k/50200k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 3    ;;; FO
+      name="s 11 " target=3.3.3.11/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=64k/64k 
+      max-limit=512k/512k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 4    ;;; FO
+      name="s 12 INDRAS ok" target=3.3.3.12/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=5400k/5400k max-limit=30800k/30800k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 5    ;;; FO I
+      name="s 13  IKA" target=3.3.3.13/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 6    ;;; FO I
+      name="7" target=3.3.3.7/32 parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 7    ;;; FO I
+      name="s 14  FAJAR" target=3.3.3.14/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=5400k/128k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 8    ;;; FO S
+      name="s 16  TIVA" target=3.3.3.16/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=500k/500k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 9    ;;; FO S
+      name="s 42  WHENI" target=3.3.3.42/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+10    ;;; FO S
+      name="s 17  ELA" target=3.3.3.17/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+11    ;;; FO F
+      name="s 18  NITRO ok" target=3.3.3.18/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=5400k/5400k max-limit=30800k/30800k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+12    ;;; FO F
+      name="s 19 ARIP ok" target=3.3.3.19/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=90800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+13    ;;; H W
+      name="s 15  AGUS ok" target=3.3.3.15/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=5400k/128k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+14    ;;; FO
+      name="s 20 NYOMAN- BAGUS" target=3.3.3.20/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=5400k/128k max-limit=30800k/30800k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+15    ;;; L
+      name="s 21 TAUFIK" target=3.3.3.21/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+16    ;;; L
+      name="s 22 YOYON" target=3.3.3.22/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=5400k/128k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+17    ;;; FO
+      name="S 26 REZA NEW" target=3.3.3.26/32 parent=# GLOBAL packet-marks="" 
+      priority=2/2 queue=default-small/default-small limit-at=15400k/15400k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+18    ;;; FO
+      name="s 23 HANA ok" target=3.3.3.23/32 parent=# GLOBAL packet-marks="" 
+      priority=2/2 queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+19    ;;; FO
+      name="s 25 >> HERI" target=3.3.3.25/32 parent=# GLOBAL packet-marks="" 
+      priority=2/2 queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=50800k/50800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+20    ;;; FO
+      name="s 24 >> KUKUH" target=3.3.3.24/32 parent=# GLOBAL packet-marks="" 
+      priority=2/2 queue=default-small/default-small limit-at=5400k/5400k 
+      max-limit=30800k/30800k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+21    ;;; FO S
+      name="s 28" target=3.3.3.28/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=0/0 
+      max-limit=128k/128k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+22    ;;; FO
+      name="s 27 JOKO KAKAP" target=3.3.3.27/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=3400k/3400k max-limit=50400k/30400k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+23    ;;; H W
+      name="s 29  TRIMAH ok" target=3.3.3.29/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=3400k/3400k max-limit=7400k/7400k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+24    ;;; FO S
+      name="s 30  PUTRA" target=3.3.3.30/32,3.3.3.47/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=3400k/3400k max-limit=15400k/15400k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+25    ;;; FO
+      name="s 31  PRAM NEW ok" target=3.3.3.31/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=3400k/3400k max-limit=10400k/10400k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+26    ;;; FO D
+      name="s 32  DANI ok" target=3.3.3.32/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+27    ;;; FO F
+      name="s 33  " target=3.3.3.33/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=0/0 
+      max-limit=20400k/20400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+28    name="s 34  EKO KAKAP" target=3.3.3.34/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+29    ;;; H W
+      name="s 35  SARYADI ok" target=3.3.3.35/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=3400k/3400k max-limit=10400k/10400k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+30    name="s 36  YUDHA" target=3.3.3.36/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=500k/500k 
+      max-limit=10400k/20400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=2/2 
+
+31    ;;; H W
+      name="s 37  AAN" target=3.3.3.37/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+32    ;;; FO D
+      name="s 38  TINI" target=3.3.3.38/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+33    ;;; FO N
+      name="s 39  NUGROHO" target=3.3.3.39/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+34    ;;; L
+      name="s 40  KECIL" target=3.3.3.40/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+35    name="s 41  WAWAN ok" target=3.3.3.41/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=20400k/20400k 
+      max-limit=35400k/35400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+36    name="s 43  BU GINO" target=3.3.3.43/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/0 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+37    ;;; FO
+      name="s 44  TRI HERMANTO ok" target=3.3.3.44/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=3400k/3400k max-limit=10400k/10400k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+38    ;;; FO
+      name="s 45 CATUR ADI NUGROHO  Gabus7/7" target=3.3.3.45/32 
+      parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+39    ;;; FO
+      name="s 46 " target=3.3.3.46/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=128k/128k 
+      max-limit=128k/128k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+40    ;;; FO
+      name="s 48 RINA bwh ats" target=3.3.3.48/32,3.3.3.57/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=3400k/3400k max-limit=20400k/20400k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+41    ;;; FO
+      name="s 49 FEBRI" target=3.3.3.49/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+42    ;;; FO
+      name="s 52 BAMBANG ok" target=3.3.3.52/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=default-small/default-small 
+      limit-at=3400k/3400k max-limit=10400k/10400k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+43    ;;; FO
+      name="s 51 NOVI" target=3.3.3.51/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/1k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+44    ;;; FO
+      name="s 50" target=3.3.3.50/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=0/0 
+      max-limit=400k/400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+45    ;;; FO
+      name="s 53  HAR" target=3.3.3.53/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+46    ;;; FO
+      name="s 55 NDIMAN" target=3.3.3.55/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+47    ;;; FO
+      name="s 56 YOYOK" target=3.3.3.56/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=3400k/3400k 
+      max-limit=10400k/10400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 
+
+48    name="s 2-8  2-6" 
+      target=3.3.3.2/32,3.3.3.3/32,3.3.3.4/32,3.3.3.5/32,3.3.3.6/32,3.3.3.8/32 
+      parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=default-small/default-small limit-at=512k/512k max-limit=1M/1M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.5/0.5 
+
+49    ;;; E
+      name="s 58 -  62" 
+      target=3.3.3.58/32,3.3.3.59/32,3.3.3.60/32,3.3.3.61/32,3.3.3.62/32 
+      parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=default-small/default-small limit-at=0/0 max-limit=3400k/3400k 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.5/0.5 
+
+50    ;;; FO
+      name="s 54" target=3.3.3.54/32 parent=# GLOBAL packet-marks="" 
+      priority=3/3 queue=default-small/default-small limit-at=0/0 
+      max-limit=3400k/3400k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.5/0.5 

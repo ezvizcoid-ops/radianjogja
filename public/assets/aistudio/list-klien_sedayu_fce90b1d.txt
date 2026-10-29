@@ -1,0 +1,95 @@
+# 2026-10-29 17:37:58 by RouterOS 7.20.8
+# software id = GLT2-1VNM
+#
+Flags: X - disabled, I - invalid; D - dynamic 
+ 0    name="CATUR PC" target=BRIDGE 4 HUB-catur parent=none packet-marks="" 
+      priority=8/8 queue=default-small/default-small limit-at=0/0 
+      max-limit=101M/101M burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.5/0.5 
+
+ 1    ;;; 100
+      name="UGES" target=BRIDGE 5 UGES parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 2    ;;; ASDAS
+      name="CATUR" target=3.3.3.2/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=5M/128k max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 3    name="BLOK A" target=3.3.3.31/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=512k/512k 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 4    ;;; 150
+      name="FERRY" target=3.3.3.32/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=110M/110M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 5    name="MUL" target=3.3.3.43/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=202M/202M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 6    ;;; 100
+      name="UUT" target=3.3.3.42/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=202M/202M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 7    name="ADAM" target=3.3.3.44/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 8    name="CELLO" target=3.3.3.45/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+ 9    ;;; 100
+      name="ARIF" target=3.3.3.46/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+10    ;;; 100
+      name="HERU" target=3.3.3.47/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+11    ;;; 100
+      name="UGES IP" target=3.3.3.48/32 parent=none packet-marks="" 
+      priority=8/8 queue=default-small/default-small limit-at=0/0 
+      max-limit=101M/101M burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.5/0.5 
+
+12    ;;; 100
+      name="YUDIS" target=3.3.3.49/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+13    ;;; 150
+      name="AUL" target=3.3.3.50/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+14    ;;; 100
+      name="BAGAS" target=3.3.3.51/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+15    ;;; 100
+      name="SIGIT" target=3.3.3.52/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=55M/55M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+16    ;;; 100
+      name="XXX ONT HUAWEI 5G" target=3.3.3.53/32 parent=none packet-marks="" 
+      priority=8/8 queue=default-small/default-small limit-at=0/0 
+      max-limit=200M/200M burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.5/0.5 
+
+17    name="TESTER" target=3.3.3.39/32 parent=none packet-marks="" priority=8/8 
+      queue=default-small/default-small limit-at=0/0 max-limit=101M/101M 
+      burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.5/0.5 
+
+18    name="33 TESTER ONT" target=3.3.3.33/32 parent=none packet-marks="" 
+      priority=8/8 queue=default-small/default-small limit-at=0/0 
+      max-limit=900M/900M burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.5/0.5 

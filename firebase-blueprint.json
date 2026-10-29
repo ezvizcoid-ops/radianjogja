@@ -1,0 +1,192 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with role-based access for Radian Jogja ISP system",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 120 },
+        "name": { "type": "string", "maxLength": 100 },
+        "role": { "type": "string", "enum": ["admin", "technician", "customer"] },
+        "phone": { "type": "string", "maxLength": 20 },
+        "address": { "type": "string", "maxLength": 255 },
+        "customerCode": { "type": "string", "maxLength": 30 },
+        "avatarUrl": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "name", "role"]
+    },
+    "Customer": {
+      "title": "Customer",
+      "description": "ISP Subscriber account details with encrypted credentials and network config",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "customerCode": { "type": "string", "maxLength": 30 },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 120 },
+        "phone": { "type": "string", "maxLength": 25 },
+        "packageId": { "type": "string", "maxLength": 50 },
+        "packageName": { "type": "string", "maxLength": 100 },
+        "bandwidthSpeed": { "type": "string", "maxLength": 30 },
+        "monthlyFee": { "type": "number" },
+        "pppoeUser": { "type": "string", "maxLength": 64 },
+        "assignedIp": { "type": "string", "maxLength": 45 },
+        "ontMac": { "type": "string", "maxLength": 30 },
+        "odpBox": { "type": "string", "maxLength": 50 },
+        "areaZone": { "type": "string", "maxLength": 80 },
+        "address": { "type": "string", "maxLength": 255 },
+        "status": { "type": "string", "enum": ["ACTIVE", "ISOLATED", "SUSPENDED", "PENDING_INSTALL"] },
+        "encryptedNik": { "type": "string", "maxLength": 255 },
+        "signalDbm": { "type": "number" },
+        "dueDateDay": { "type": "number" },
+        "installedAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["customerCode", "name", "email", "packageId", "status"]
+    },
+    "Bill": {
+      "title": "Bill",
+      "description": "Monthly internet subscription invoice and payment record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "invoiceNo": { "type": "string", "maxLength": 50 },
+        "customerId": { "type": "string", "maxLength": 64 },
+        "customerCode": { "type": "string", "maxLength": 30 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "customerEmail": { "type": "string", "maxLength": 120 },
+        "packageName": { "type": "string", "maxLength": 100 },
+        "periodMonth": { "type": "number" },
+        "periodYear": { "type": "number" },
+        "amount": { "type": "number" },
+        "taxAmount": { "type": "number" },
+        "uniqueCode": { "type": "number" },
+        "totalAmount": { "type": "number" },
+        "status": { "type": "string", "enum": ["UNPAID", "PAID", "OVERDUE", "CANCELLED"] },
+        "dueDate": { "type": "string", "format": "date-time" },
+        "paidAt": { "type": "string", "format": "date-time" },
+        "paymentMethod": { "type": "string", "maxLength": 50 },
+        "paymentReference": { "type": "string", "maxLength": 100 },
+        "emailReportSent": { "type": "boolean" },
+        "emailReportTimestamp": { "type": "string", "format": "date-time" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["invoiceNo", "customerId", "customerName", "totalAmount", "status", "dueDate"]
+    },
+    "Ticket": {
+      "title": "Ticket",
+      "description": "Technical support and disturbance incident ticket",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "ticketNo": { "type": "string", "maxLength": 50 },
+        "customerId": { "type": "string", "maxLength": 64 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "customerPhone": { "type": "string", "maxLength": 25 },
+        "customerAddress": { "type": "string", "maxLength": 255 },
+        "category": { "type": "string", "maxLength": 60 },
+        "priority": { "type": "string", "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"] },
+        "subject": { "type": "string", "maxLength": 150 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "status": { "type": "string", "enum": ["OPEN", "ASSIGNED", "IN_PROGRESS", "RESOLVED", "CLOSED"] },
+        "assignedTechnicianId": { "type": "string", "maxLength": 64 },
+        "assignedTechnicianName": { "type": "string", "maxLength": 100 },
+        "opticalAttenuationDbm": { "type": "number" },
+        "actionNotes": { "type": "string", "maxLength": 1000 },
+        "resolutionProofUrl": { "type": "string", "maxLength": 500 },
+        "resolvedAt": { "type": "string", "format": "date-time" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ticketNo", "customerId", "subject", "status", "priority"]
+    },
+    "DeviceNode": {
+      "title": "DeviceNode",
+      "description": "Network infrastructure nodes, OLT, Core Routers, and Client ONTs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "name": { "type": "string", "maxLength": 100 },
+        "type": { "type": "string", "enum": ["OLT", "CORE_ROUTER", "DISTRIBUTION_SWITCH", "ODP_SPLITTER", "CLIENT_ONT"] },
+        "ipAddress": { "type": "string", "maxLength": 45 },
+        "location": { "type": "string", "maxLength": 100 },
+        "status": { "type": "string", "enum": ["ONLINE", "WARNING", "OFFLINE"] },
+        "latencyMs": { "type": "number" },
+        "packetLoss": { "type": "number" },
+        "opticalRxDbm": { "type": "number" },
+        "cpuUsagePercent": { "type": "number" },
+        "connectedClients": { "type": "number" },
+        "lastPing": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "type", "status"]
+    },
+    "InventoryItem": {
+      "title": "InventoryItem",
+      "description": "Equipment and stock inventory with third-party supplier API sync",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "sku": { "type": "string", "maxLength": 50 },
+        "name": { "type": "string", "maxLength": 120 },
+        "category": { "type": "string", "maxLength": 60 },
+        "quantity": { "type": "number" },
+        "unit": { "type": "string", "maxLength": 20 },
+        "minThreshold": { "type": "number" },
+        "unitCost": { "type": "number" },
+        "location": { "type": "string", "maxLength": 100 },
+        "supplierApiCode": { "type": "string", "maxLength": 50 },
+        "lastSyncedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["sku", "name", "quantity", "unit"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "Real-time push notifications for users regarding tickets, invoices, and alerts",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "recipientRole": { "type": "string", "enum": ["all", "admin", "technician", "customer"] },
+        "recipientId": { "type": "string", "maxLength": 64 },
+        "title": { "type": "string", "maxLength": 120 },
+        "message": { "type": "string", "maxLength": 500 },
+        "type": { "type": "string", "enum": ["PAYMENT", "TICKET", "NETWORK_ALERT", "SYSTEM"] },
+        "read": { "type": "boolean" },
+        "link": { "type": "string", "maxLength": 200 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "message", "type", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profiles and credentials"
+    },
+    "/customers/{customerId}": {
+      "schema": { "$ref": "#/entities/Customer" },
+      "description": "ISP Subscriber records and connection parameters"
+    },
+    "/bills/{billId}": {
+      "schema": { "$ref": "#/entities/Bill" },
+      "description": "Customer bills, monthly invoices, and payment receipts"
+    },
+    "/tickets/{ticketId}": {
+      "schema": { "$ref": "#/entities/Ticket" },
+      "description": "Technical complaint and repair tickets"
+    },
+    "/devices/{deviceId}": {
+      "schema": { "$ref": "#/entities/DeviceNode" },
+      "description": "Live network telemetry and monitoring nodes"
+    },
+    "/inventory/{itemId}": {
+      "schema": { "$ref": "#/entities/InventoryItem" },
+      "description": "Hardware and fiber stock inventory"
+    },
+    "/notifications/{notificationId}": {
+      "schema": { "$ref": "#/entities/Notification" },
+      "description": "Real-time push alerts and activity logs"
+    }
+  }
+}

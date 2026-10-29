@@ -1,0 +1,287 @@
+# 2026-10-29 17:39:48 by RouterOS 7.18.2
+# software id = 3SDF-MUK5
+#
+Flags: X - disabled, I - invalid; D - dynamic 
+ 0    name="# GLOBAL" target=BRIDGE LAN parent=none packet-marks="" priority=8/8 queue=default-small/default-small 
+      limit-at=80M/80M max-limit=95M/95M burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.1/0.1 
+
+ 1    ;;; 1
+      name="WAN-WAN [-20] huawei" target=3.3.3.49/32 parent=# GLOBAL packet-marks="" priority=1/1 queue=cake-up/cake-down 
+      limit-at=2500k/20500k max-limit=35500k/35500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+ 2    ;;; 2
+      name="AGUS dkk [-14] huawei" target=3.3.3.41/32 parent=# GLOBAL packet-marks="" priority=1/1 
+      queue=cake-up/cake-down limit-at=2500k/2500k max-limit=50500k/26500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=1/1 
+
+ 3    ;;; 1
+      name="NARDI [-20] zim" target=3.3.3.48/32 parent=# GLOBAL packet-marks="" priority=2/2 queue=cake-up/cake-down 
+      limit-at=128k/128k max-limit=128k/128k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0.1/0.1 
+
+ 4    ;;; 3
+      name="WinBengkel" target=3.3.3.29/32,3.3.3.55/32 parent=# GLOBAL packet-marks="" priority=2/2 
+      queue=cake-up/cake-down limit-at=2500k/2500k max-limit=30500k/20500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+ 5    ;;; 1
+      name="WIN BAGONG [-18] zim" target=3.3.3.32/32 parent=# GLOBAL packet-marks="" priority=2/2 queue=cake-up/cake-down 
+      limit-at=2500k/2500k max-limit=30500k/20500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+ 6    ;;; 1
+      name="UDIN AFIF [-20] hsgq admin/admin" target=3.3.3.37/32 parent=# GLOBAL packet-marks="" priority=2/2 
+      queue=cake-up/cake-down limit-at=2500k/2500k max-limit=35500k/10500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+ 7    ;;; 1
+      name="YULIANTI [-20] admin/admin" target=3.3.3.35/32 parent=# GLOBAL packet-marks="" priority=2/2 
+      queue=cake-up/cake-down limit-at=2500k/2500k max-limit=20500k/20500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+ 8    ;;; 1
+      name="TEGUH [-18] zim" target=3.3.3.33/32 parent=# GLOBAL packet-marks="" priority=2/2 queue=cake-up/cake-down 
+      limit-at=2500k/2500k max-limit=30500k/20500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+ 9    ;;; 1
+      name="HARNO Pol" target=3.3.3.38/32 parent=# GLOBAL packet-marks="" priority=2/2 queue=cake-up/cake-down 
+      limit-at=2500k/2500k max-limit=30500k/20500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+10 I  ;;; 3
+      name="WIN WIN" target=3.3.3.2/32 parent=# GLOBAL packet-marks="" priority=8/8 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=20500k/20500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 time=9h1s-17h59m59s,sun,fri,sat 
+
+11 I  ;;; 3
+      name="WIN-WIN 3" target=3.3.3.2/32 parent=# GLOBAL packet-marks="" priority=8/8 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=20500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 time=18h1s-8h59m59s,sun,fri,sat 
+
+12    ;;; 3
+      name="WIN WIN 2" target=3.3.3.2/32 parent=# GLOBAL packet-marks="" priority=8/8 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=20500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+13    ;;; 2
+      name="UUN [-22] huawei" target=3.3.3.39/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=7500k/7500k max-limit=21500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+14    ;;; 2
+      name="MENUK [-14] zim" target=3.3.3.47/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+15    ;;; 3
+      name="VENDI" target=3.3.3.15/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+16    ;;; 1
+      name="WENI [-22] zim" target=3.3.3.18/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/12500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+17    ;;; 1
+      name="BAYU -23 zim" target=3.3.3.27/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=20500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+18    ;;; 3
+      name="WIDODO" target=3.3.3.31/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+19    ;;; 1
+      name="TRI/GENDUT [-23] zim" target=3.3.3.20/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+20    ;;; 3
+      name="TIAN SLAMET admin1 | remote : x" target=3.3.3.30/32,3.3.3.52/32 parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=cake-up/cake-down limit-at=1800k/1800k max-limit=15500k/12500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+21    ;;; 3
+      name="YOSAN" target=3.3.3.24/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+22    ;;; 2
+      name="NANANG [-23] global 2band, global/oraglobalorabudal" target=3.3.3.4/32 parent=# GLOBAL packet-marks="" 
+      priority=2/2 queue=cake-up/cake-down limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.1/0.1 
+
+23    ;;; 2
+      name="BOWO [-13] zim" target=3.3.3.40/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+24    ;;; 2
+      name="GATOT [-23] huawei harus ganti hijau" target=3.3.3.7/32 parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=cake-up/cake-down limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+25    ;;; 1
+      name="BIYANTO PAUD [-21] zim" target=3.3.3.23/32 parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=cake-up/cake-down limit-at=1800k/1800k max-limit=15500k/12500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+26    ;;; 3
+      name="ARIF MASJID" target=3.3.3.22/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/12500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+27    ;;; 1
+      name="SIGIT GOJEK [-23] zim" target=3.3.3.19/32 parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=cake-up/cake-down limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+28    ;;; 2
+      name="SUPRIYATI -22 huawei " target=3.3.3.53/32 parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=cake-up/cake-down limit-at=1800k/1800k max-limit=25500k/15500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+29    ;;; 1
+      name="NANO [-20] zim" target=3.3.3.44/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+30    ;;; 1
+      name="DWI [-22] zim" target=3.3.3.45/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+31    ;;; 3
+      name="POS RONDA 39" target=3.3.3.43/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=70500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+32    name="S55 - 59 ip cadangan" target=3.3.3.57/32,3.3.3.58/32,3.3.3.59/32,3.3.3.60/32,3.3.3.61/32 parent=# GLOBAL 
+      packet-marks="" priority=3/3 queue=cake-up/cake-down limit-at=10k/10k max-limit=1M/1M burst-limit=0/0 
+      burst-threshold=0/0 burst-time=0s/0s bucket-size=0.1/0.1 
+
+33    ;;; 2
+      name="MENIK SALON {-22} huawei" target=3.3.3.34/32 parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=cake-up/cake-down limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+34    ;;; 3
+      name="MANDA" target=3.3.3.14/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+35    ;;; 1
+      name="JOKO PAUD [-20] zim" target=3.3.3.21/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/12500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+36    ;;; 3
+      name="MAMI" target=3.3.3.13/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+37    ;;; 3
+      name="SURYONO" target=3.3.3.28/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+38    ;;; 3
+      name="MBAK JUM" target=3.3.3.9/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+39    ;;; 3
+      name="YANU" target=3.3.3.11/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+40    ;;; 3
+      name="KIRAN ON 05.00" target=3.3.3.36/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=10500k/7500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 time=5h1s-21h,sun,mon,tue,wed,thu,fri,sat 
+
+41 I  ;;; 3
+      name="KIRAN OFF 21.00" target=3.3.3.36/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=100k/100k max-limit=1500k/128k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=0/0 
+      time=21h1s-5h,sun,mon,tue,wed,thu,fri,sat 
+
+42    ;;; 3
+      name="JOHAN" target=3.3.3.17/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+43    ;;; 2
+      name="KARSONO [-18] zim" target=3.3.3.8/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/15500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+44    ;;; 2
+      name="FARID [-23] zim" target=3.3.3.5/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/9500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+45    ;;; 3
+      name="PAK JI" target=3.3.3.16/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+46    ;;; 3
+      name="JOKO INDAH" target=3.3.3.12/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/12500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+47    ;;; 1
+      name="SUPRI [-21] zim" target=3.3.3.25/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+48    ;;; 2
+      name="DARSONO remote x" target=3.3.3.6/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+49    ;;; 2
+      name="WAGINO [-18] huawei" target=3.3.3.46/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+50    ;;; 3
+      name="ANDI TELAT " target=3.3.3.3/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/9500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+51    ;;; 2
+      name="WIWIT" target=3.3.3.42/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+52    name="PC Anydesk" target=3.3.3.62/32 parent=# GLOBAL packet-marks="" priority=8/8 queue=cake-up/cake-down 
+      limit-at=128k/128k max-limit=10M/5M burst-limit=20500k/6M burst-threshold=20M/6M burst-time=20s/5s 
+      bucket-size=0.1/0.1 
+
+53    ;;; 2
+      name="ERWIN [-21] zim" target=3.3.3.50/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=15500k/5500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s bucket-size=2/2 
+
+54    ;;; 3
+      name="RINA SAREH" target=3.3.3.10/32,3.3.3.26/32 parent=# GLOBAL packet-marks="" priority=3/3 
+      queue=cake-up/cake-down limit-at=1800k/1800k max-limit=15500k/15500k burst-limit=0/0 burst-threshold=0/0 
+      burst-time=0s/0s bucket-size=0.1/0.1 
+
+55    ;;; 2
+      name="IDA [-23] huawei" target=3.3.3.51/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=20500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+56    ;;; 2
+      name="NARTO" target=3.3.3.54/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=20500k/10500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 
+
+57    ;;; 2
+      name="KRIS BON" target=3.3.3.56/32 parent=# GLOBAL packet-marks="" priority=3/3 queue=cake-up/cake-down 
+      limit-at=1800k/1800k max-limit=20500k/5500k burst-limit=0/0 burst-threshold=0/0 burst-time=0s/0s 
+      bucket-size=0.1/0.1 

@@ -1,0 +1,6 @@
+{
+  "name": "RADIAN JOGJA - ISP Management",
+  "description": "Sistem manajemen operasional ISP internet wifi rumahan RADIAN JOGJA lengkap dengan penagihan otomatis, payment gateway, tiket teknis, monitoring koneksi, dan analitik performa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
